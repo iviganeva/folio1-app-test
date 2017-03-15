@@ -1,0 +1,46 @@
+﻿@model IEnumerable<StudentClass.Models.Student>
+
+<h2>Students</h2>
+
+<table class="table" border="1">
+    <tr class="success">
+        <th>
+            Student Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            GPA
+        </th>
+        <th colspan="3"></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPA)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("ADD", "Create")
+</p>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Class")
+</div>
