@@ -13,6 +13,7 @@ Your SQL Server installation should be the default instance (not YOURMACHINE\SQL
 1. Under the repository name, click Clone or download. 
 2. Build solution.
 3. In the Package Manager Console enter the command: update-database.
+<br>
 The update-database runs the first migration which creates the database. By default, the database is created as a SQL Server Express LocalDB database. 
 
 
